@@ -1,0 +1,141 @@
+NOTES ON PORTABLE BETA TEST VERSION 4.0b
+==============================================
+
+INSTALLATION
+----------------------------------------------
+
+PAUP* 4.0 beta and associated files are distributed in a tarfile 
+archive.  To extract the files from the archive simply move the 
+tarfile to the directory where you wish to install the PAUP 
+directory and type: 
+
+tar -xf paupxxxx 
+
+Where xxxx is the version name. The PAUP directory contains the 
+following files:
+
+paup4b9-xxxxx             //PAUP binary
+Docs/Cmd_ref_v2.pdf       //Command reference documentation
+Docs/Quick_start_v1.pdf   //introduction to basic PAUP* usage
+Release-Notes.txt
+Sample_analysis_files/ML_analysis.nex
+Sample_analysis_files/MP_analysis.nex
+Sample_import_files/GCG.msf
+Sample_import_files/hennig86.hen
+Sample_import_files/mega.meg
+Sample_import_files/nbrf.pir
+Sample_import_files/phylip_3x.dat
+Sample_import_files/simple.txt
+Sample_import_files/tab.txt
+Sample_NEXUS_files/angiosperms.nex
+Sample_NEXUS_files/avian-ovomucoids.nex
+Sample_NEXUS_files/primate-mtDNA-interleaved.nex
+Sample_NEXUS_files/primate-mtDNA.nex
+
+In order to execute PAUP, the PAUP binary must be in your search 
+path.  Typing "echo $PATH" or "echo $path" will usually tell you 
+what directories are in your search path. You can either move the 
+PAUP binary to one of the directories already in your path or add 
+a new directory to your search path and move the PAUP binary to
+the new directory.
+
+
+DOCUMENTATION and SAMPLE FILES
+----------------------------------------------
+
+The file "Cmd_ref_v2.pdf" is an Adobe Acrobat document containing
+preliminary documentation.  This document is primarily a "command
+reference" and it is still fairly rough.  The document is heavily
+hyperlinked and it is easy to navigate using Acrobat 3.0 or later
+(http://www.adobe.com/Acrobat).  Newer versions of the manual 
+will be made accessible on-line as they become available.  The 
+Quick-start tutorial is designed to introduce users with no 
+previous experience to the basic usage of PAUP* 4.  After version
+4.0 is complete, a paper copy of the final documentation will
+be mailed to you.
+
+NEXUS formatted sample data files are provided in the 
+Sample_NEXUS_files directory.  The Sample_import_files directory 
+contains Non-NEXUS formatted files that PAUP can import with
+the "tonexus" command. See the command reference document for more
+information regarding the "tonexus" command. Finally, two sample 
+analysis files are provided in the Sample_analysis_files directory.
+To run one of these files, go to the Sample_analysis_files 
+directory and type the name of the PAUP binary followed by the name
+of one of the sample files.  For example:
+
+system prompt> paup4b MP_analysis.nex    
+  
+This example assumes that the paup binary (paup4b) is in your search
+path. 
+
+
+SUPPORT
+----------------------------------------------
+
+Support for most issues pertaining to use of PAUP* can be found
+on-line at:
+
+http://paup.csit.fsu.edu/support.html   
+
+If you are unable to find an answer to your question on one of our web
+pages, we encourage you to post your question to the appropriate 
+"conference" at the PAUP*forum web site: 
+
+http://pauptech.csit.fsu.edu/~paupforum/
+
+Since we are not a giant software company with a staff of technical 
+support specialists, posting your questions to the PAUP*forum is 
+fastest way to get an answer to your question.  Jim Wilgenbusch and I
+will try to answer your questions as quickly as possilbe, but our time 
+is limited (especially given the need to complete the 4.0 program and 
+manual).
+
+There are no restrictions on publication of results using this beta
+version (unlike the earlier development versions). The recommended 
+citation format is:
+
+Swofford, D. L. 2002. PAUP*. Phylogenetic Analysis Using Parsimony 
+   (*and Other Methods). Version 4. Sinauer Associates, Sunderland, 
+   Massachusetts.
+
+Note: Because there are a number of beta and test versions of the 
+program you should mention the specific version of PAUP* somewhere 
+in the methods. 
+
+REPORTING PROBLEMS
+----------------------------------------------
+
+Thank you for taking a chance on this beta version.  Your cooperation in
+reporting any bugs or other anomalies would be appreciated. Suggestions 
+for enhancements are welcome, although, unless a feature is both extremely 
+simple to program and very compelling, new features will have to wait 
+until after 4.0 has been completed.
+
+If you report a bug, please be sure to supply all necessary
+information that will enable us to replicate it.  This includes:
+
+1. A description of the problem, including a list of all steps that led
+   to the bug.  If you can repeat the problem yourself in a well-defined 
+   sequence of steps, there is a much greater chance that I will
+   be able to fix it.
+
+2. A copy of the data file and any other relevant files (these will kept
+   strictly confidential).
+
+3. The exact version number of the program.
+
+4. The CPU and operating system on which you are running the program.
+
+Send reports to:     paup-support@csit.fsu.edu
+
+Please check our "Known Problems" page 
+
+http://paup.csit.fsu.edu/problems.html
+
+before sending your bug report.  There is no need to report bugs that are 
+already known.  If there is any question as to whether your bug duplicates
+a known problem it would be better to send it in just in case.
+
+Thanks,
+Dave Swofford

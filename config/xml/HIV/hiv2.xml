@@ -1,0 +1,146 @@
+<genotype-analyses>
+  <alignment file="hiv2.fasta" trim="true" />
+
+  <clusters>
+
+    <cluster id="HIV2A" name="HIV2 subtype A">
+    	<taxus name="H2A.GW.ALI" />
+    	<taxus name="H2A.DE.BEN" />
+    	<taxus name="H2A.SN.ST" />
+    </cluster>
+    
+   <cluster id="HIV2B" name="HIV2 subtype B">
+ 	<taxus name="H2B.GH.86.D205" />
+    	<taxus name="H2B.CI.EHO" />
+    </cluster>
+    
+    <cluster id="SMM" name="SMM">
+    <taxus name="MAC.US.239" />
+    <taxus name="SMM.US.H9" />
+    <taxus name="STM.US.STM" />
+    <taxus name="SMM.US.PGM53" />
+    <taxus name="MNE.US.MNE027" />
+	</cluster>
+	
+   <cluster id="RCM" name="RCM">
+    <taxus name="RCM.GA.GAB1" />  
+    </cluster>
+   
+  </clusters>
+
+  <analysis id="pure" type="paup">
+    <identify>
+		HIV2A,HIV2B,SMM,RCM
+    </identify>
+    <cutoff>
+      70
+    </cutoff>
+    <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      exclude gapped;
+      export format=nexus file=paup.nex replace=yes;
+      outgroup RCM.GA.GAB1;
+      set criterion=distance outroot=monophyl;
+      dset distance=HKY NegBrLen=Prohibit;
+      NJ;
+      savetree format=phylip brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+    </block>
+    <options>
+      log,alignment,tree
+    </options>
+  </analysis>
+
+  <analysis id="pure-puzzle" type="paup">
+    <identify>
+		HIV2A,HIV2B,SMM,RCM
+    </identify>
+    <cutoff>
+      70
+    </cutoff>
+    <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      exclude gapped;
+      export format=nexus file=paup.nex replace=yes;
+      outgroup RCM.GA.GAB1;
+      set criterion=distance outroot=monophyl;
+      dset distance=HKY NegBrLen=Prohibit;
+      NJ;
+      savetree format=phylip brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+    </block>
+    <options>
+      log,alignment,tree,signal,puzzle-likelihood-mapping
+    </options>
+  </analysis>
+
+  <analysis id="scan-pure" type="scan">
+    <window>
+      500
+    </window>
+    <step>
+      50
+    </step>
+    <cutoff>
+      0.9
+    </cutoff>
+    <analysis type="paup">
+      <identify>
+		HIV2A,HIV2B,SMM,RCM
+	</identify>
+      <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      exclude gapped;
+      export format=nexus file=paup.nex replace=yes;
+      set criterion=distance outroot=monophyl;
+      dset distance=HKY NegBrLen=Prohibit;
+      NJ;
+      savetree format=phylip brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+      </block>
+    </analysis>
+  </analysis>
+
+  <analysis id="scan-pure-self" type="scan">
+    <window>
+      700
+    </window>
+    <step>
+      100
+    </step>
+    <analysis type="paup">
+      <identify>
+		HIV2A,HIV2B,SMM,RCM
+      </identify>
+      <block>
+        begin paup;
+        log file=paup.log replace=yes;
+		exclude gapped;
+        export format=nexus file=paup.nex replace=yes;
+        outgroup RCM.GA.GAB1;
+        set criterion=distance outroot=monophyl;
+        dset distance=HKY NegBrLen=Prohibit;
+        NJ;
+        savetree format=phylip brlens=yes file=paup.tre replace=yes;
+        bootstrap nreps=100 search=nj;
+        end;
+        quit;
+      </block>
+          <options>
+      signal,puzzle-likelihood-mapping
+    </options>
+    </analysis>
+  </analysis>
+    
+</genotype-analyses>
+
+

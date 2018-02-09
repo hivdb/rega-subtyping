@@ -1,0 +1,445 @@
+<genotype-analyses>
+  <alignment file="hiv1trim.fasta" trim="true" />
+
+  <clusters>
+    <cluster id="A" name="HIV-1 Subtype A">
+      <description>blabla</description>
+      <cluster id="A1" name="HIV-1 Subtype A (A1)">
+      	 <description>blabla</description>
+         <taxus name="A1_UA_01_01UADN139_DQ823357" />
+         <taxus name="A1_RU_00_RU00051_EF545108" />
+         <taxus name="A1_UG_UG031_AB098330" />
+         </cluster>
+      
+      <cluster id="A2" name="HIV-1 Subtype A (A2)">
+	     <taxus name="A2_CD9797CDKTB48" />
+		 <taxus name="A2_CY9494CY01741" />
+    	 <tags>CRF</tags>
+      </cluster>
+    </cluster>
+   
+    <cluster id="B" name="HIV-1 Subtype B">
+         <taxus name="B_US_1986_5019_86_AY835780" />
+         <taxus name="B_US_90_US2_AY173953" />
+         <taxus name="B_BR_03_BREPM1028_EF637053" />
+    </cluster>
+
+    <cluster id="C" name="HIV-1 Subtype C">
+         <taxus name="C_ZA_98_TV001_AY162223" />
+         <taxus name="C_IN_x_VB39_EF694033" />
+         <taxus name="C_IL_99_99ET1_AY255823" /> 
+    </cluster>
+
+ 	<cluster id="D" name="HIV-1 Subtype D">
+         <taxus name="D_UG_99_99UGG35093_AF484495" />
+         <taxus name="D_UG_98_98UG57143_AF484514" />
+         <taxus name="D_ZA_84_R2_AY773338" />
+    </cluster>
+    
+    <cluster id="F" name="HIV-1 Subtype F">
+ 	  <cluster id="F1" name="HIV-1 Subtype F (F1)">
+         <taxus name="F1_ES_x_X1670_DQ979024" />
+         <taxus name="F1_BR_89_BZ126_AY173957" />
+ 	  </cluster>
+ 	  <cluster id="F2" name="HIV-1 Subtype F (F2)">
+         <taxus name="F2_CM_95_MP255_AJ249236" />
+         <taxus name="F2_CM_97_CM53657_AF377956" />
+    	 <tags>CRF</tags>
+	  </cluster>		
+    </cluster>
+     
+    <cluster id="G" name="HIV-1 Subtype G">
+         <taxus name="G_NG_01_01NGPL0669_DQ168576" />
+         <taxus name="G_ES_05_ES_EU786670" />
+         <taxus name="G_GH_2003_GHNJ175_AB231893" />
+    </cluster>
+
+    <cluster id="H" name="HIV-1 Subtype H">
+         <taxus name="H_CF_90_056_AF005496" />
+         <taxus name="H_BE_93_VI997_AF190128" />
+         <taxus name="H_BE_93_VI991_AF190127" />
+    </cluster>
+
+    <cluster id="J" name="HIV-1 Subtype J">
+         <taxus name="J_SE_93_SE7887_AF082394" />
+         <taxus name="J_SE_1994_SE7022_AF082395_1" />
+         <taxus name="J_CD_97_J_97DC_KTB147_EF614151" />
+    </cluster>
+
+    <cluster id="K" name="HIV-1 Subtype K">
+         <taxus name="K_CD_97_EQTB11C_AJ249235" />
+         <taxus name="K_CM_96_MP535_AJ249239" />
+    </cluster>
+
+    <cluster id="01_AE" name="HIV-1 CRF 01_AE">
+      <taxus name="01_AECF19090CF11697" />
+	  <taxus name="01_AETH90CM240" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="02_AG" name="HIV-1 CRF 02_AG">
+	  <taxus name="02_AGCM9797CMP807" />
+      <taxus name="02_AGFR91DJ264" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="03_AB" name="HIV-1 CRF 03_AB">
+	  <taxus name="03_ABRU97KAL153" />
+      <taxus name="03_ABRU98RU98001" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="04_CPX" name="HIV-1 CRF 04_CPX">
+	  <taxus name="04_CPXG1R9197PVCH" />
+      <taxus name="04_CPXGR9797PVMY" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="05_DF" name="HIV-1 CRF 05_DF">
+	  <taxus name="05_DFBEVI1310" />
+      <taxus name="05_DFBE93VI961" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="06_CPX" name="HIV-1 CRF 06_CPX">
+   	  <taxus name="06_CPXAU96BFP90" />
+   	  <taxus name="06_CPXML9595ML84" />
+      <tags>CRF</tags>
+    </cluster>
+    
+    <cluster id="07_BC" name="HIV-1 CRF 07_BC">
+   	  <taxus name="07_BCC1N9797CN001" />
+      <taxus name="07_BCCN9898CN009" />
+      <tags>CRF</tags>
+    </cluster>
+    
+    <cluster id="08_BC" name="HIV-1 CRF 08_BC">
+	  <taxus name="08_BCCN19797CNGX7F" />
+      <taxus name="08_BCCN9898CN006" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="10_CD" name="HIV-1 CRF 10_CD">
+	  <taxus name="10_CDTZ19696TZBF071" />
+      <taxus name="10_CDTZ9696TZBF110" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="11_CPX" name="HIV-1 CRF 11_CPX">
+	  <taxus name="11_CPXF1R99MP1298" />
+      <taxus name="11_CPXGRGR17" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="12_BF" name="HIV-1 CRF 12_BF">
+	  <taxus name="12_BFAR97A32989" />
+   	  <taxus name="12_BFU1Y99URTR23" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="13_CPX" name="HIV-1 CRF 13_CPX">
+	  <taxus name="13_CPXC1M961849" />
+      <taxus name="13_CPXCM964164" />
+      <tags>CRF</tags>
+    </cluster>
+
+    <cluster id="14_BG" name="HIV-1 CRF 14_BG">
+	  <taxus name="14_BGE1S00X477" />
+      <taxus name="14_BGES99X397" />
+      <tags>CRF</tags>
+    </cluster>
+    
+   <cluster id="09_cpx" name="HIV-1 CRF 09_cpx">
+	  <taxus name="09_cpxCI0000IC_10092AJ866553" />
+	  <taxus name="09_cpxGH9696GH2911AY093605" />
+      <tags>CRF</tags>
+    </cluster>
+      <cluster id="15_01B" name="HIV-1 CRF 15_01B">
+	  <taxus name="15_01BTH96M169DQ354120" />
+	  <taxus name="15_01BTH9999TH_R2399AF530576" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="18_cpx" name="HIV-1 CRF 18_cpx">
+	  <taxus name="18_cpxCM97CM53379AF377959" />
+	  <taxus name="18_cpxCU99CU14AY586541" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="19_cpx" name="HIV-1 CRF 19_cpx">
+	  <taxus name="19_cpxCU99CU29AY588971" />
+	  <taxus name="19_cpxCU99CU7AY894994" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="20_BG" name="HIV-1 CRF 20_BG">
+	  <taxus name="20_BGCU99Cu103AY586545" />
+	  <taxus name="20_BGES99R77AY586544" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="21_A2D" name="HIV-1 CRF 21_A2D">
+	  <taxus name="21_A2DKE91KNH1254AY945737" />
+	  <taxus name="21_A2DKE99KER2003AF457051" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="23_BG" name="HIV-1 CRF 23_BG">
+	  <taxus name="23_BGCU03CB118AY900571" />
+	  <taxus name="23_BGCU03CB347AY900572" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="24_BG" name="HIV-1 CRF 24_BG">
+	  <taxus name="24_BGCU03CB378AY900574" />
+	  <taxus name="24_BGCU03CB471AY900575" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="25_cpx" name="HIV-1 CRF 25_cpx">
+	  <taxus name="25_cpxCM0606CM_BA_040EU693240" />
+	  <taxus name="25_cpxSA03J11451EU697908" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="27_cpx" name="HIV-1 CRF 27_cpx">
+	  <taxus name="27_cpxCD9797CDKTB49AJ404325" />
+	  <taxus name="27_cpxFR0404CD_FR_KZSAM851091" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="29_BF" name="HIV-1 CRF 29_BF">
+	  <taxus name="29_BFBR01BREPM16704DQ085876" />
+	  <taxus name="29_BFBR99BREPM11948DQ085871" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="31_BC" name="HIV-1 CRF 31_BC">
+	  <taxus name="31_BCBR02110PAEF091932" />
+	  <taxus name="31_BCBR0404BR142AY727527" />
+	        <tags>CRF</tags>
+    </cluster>
+    
+    <cluster id="33_01A1" name="HIV-1 CRF 33_01A1">
+	  <taxus name="33_01B_05_DQ366659" />
+	  <taxus name="33_01B_07_AB547463" />
+	        <tags>CRF</tags>
+    </cluster>
+    
+    
+      <cluster id="35_AD" name="HIV-1 CRF 35_AD">
+	  <taxus name="35_ADAF0505AF026EF158043" />
+	  <taxus name="35_ADAF0505AF094EF158040" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="36_cpx" name="HIV-1 CRF 36_cpx ">
+	  <taxus name="36_cpxCM0000CMNYU1162EF087995" />
+	  <taxus name="36_cpxCM0000CMNYU830EF087994" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="37_cpx" name="HIV-1 CRF 37_cpx">
+	  <taxus name="37_cpxCM0000CMNYU926EF116594" />
+	  <taxus name="37_cpxCM97CM53392AF377957" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="39_BF" name="HIV-1 CRF 39_BF">
+	  <taxus name="39_BFBR0303BRRJ103EU735534" />
+	  <taxus name="39_BFBR0303BRRJ327EU735536" />
+	        <tags>CRF</tags>
+    </cluster>
+      <cluster id="40_BF" name="HIV-1 CRF 40_BF">
+	  <taxus name="40_BFBR0404BRRJ115EU735538" />
+	  <taxus name="40_BFBR0404BRSQ46EU735540" />
+	        <tags>CRF</tags>
+    </cluster>
+        <cluster id="42_BF" name="HIV-1 CRF 42_BF">
+	  <taxus name="42_BF_LU_04_EU170142" />
+	  <taxus name="42_BF_LU_03_EU170151" />
+	        <tags>CRF</tags>
+    </cluster>
+    
+      <cluster id="43_02G" name="HIV-1 CRF 43_02G">
+	  <taxus name="43_02GSA03J11223EU697904" />
+	  <taxus name="43_02GSA03J11243EU697907" />   
+	  <tags>CRF</tags>
+    </cluster>
+    
+          <cluster id="47_BF" name="HIV-1 CRF 47_BF">
+	  <taxus name="47BFES2008P1942GQ372987" />
+	  <taxus name="47BFES2008X24572FJ670529" />   
+	  <tags>CRF</tags>
+    </cluster>
+    
+    <cluster id="Group_O" name="Group O">
+	  <taxus name="OCM91MVP5180" />
+    </cluster>
+  </clusters>
+
+  <analysis id="pure" type="paup">
+    <identify>
+      A1,B,C,D,F1,G,H,J,K
+    </identify>
+    <cutoff>
+      70
+    </cutoff>
+    <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      export format=nexus file=paup.nex replace=yes;
+      set rootmethod=midpoint;
+      set criterion=distance;
+      dset distance=HKY NegBrLen=SetAbsVal;
+      constraints CONSTRE(BACKBONE)=((2,3,4),((5,6,7),(11,12,13)),(8,9,10),(14,15),(16,17,18),(19,20,21),(22,23,24),(25,26));
+      NJ constraints=CONSTRE enforce=yes;
+      savetree format=nexus brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+    </block>
+    <options>
+      log,alignment,tree,inner,outer
+    </options>
+  </analysis>
+
+  <analysis id="pure-puzzle" type="paup">
+    <identify>
+      A1,B,C,D,F1,G,H,J,K
+    </identify>
+    <cutoff>
+      70
+    </cutoff>
+    <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      exclude gapped;
+      export format=nexus file=paup.nex replace=yes;
+      set rootmethod=midpoint;
+      set criterion=distance outroot=monophyl;
+      dset distance=HKY NegBrLen=SetAbsVal;
+      NJ;
+      savetree format=nexus brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+    </block>
+    <options>
+      log,alignment,tree,signal,puzzle-likelihood-mapping,inner,outer
+    </options>
+  </analysis>
+
+  <analysis id="crf" type="paup">
+    <identify>
+      A,A1,A2,B,C,D,F,F1,F2,G,H,J,K,01_AE,02_AG,03_AB,04_CPX,05_DF,06_CPX,07_BC,08_BC,09_cpx,10_CD,11_CPX,12_BF,13_CPX,14_BG,18_cpx,19_cpx,20_BG,24_BG,25_cpx,27_cpx,29_BF,31_BC,35_AD,37_cpx,39_BF,40_BF,42_BF,43_02G,47_BF
+    </identify>
+    <cutoff>
+      70
+    </cutoff>
+    <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      exclude gapped;
+      export format=nexus file=paup.nex replace=yes;
+      set rootmethod=midpoint;
+      Lset  Base=(0.4339 0.1431 0.2052)  Nst=6  Rmat=(1.7514 6.1130 0.5873 0.9365 11.4053)  Rates=gamma  Shape=0.8740  Pinvar=0.3775;
+      set criterion=distance outroot=monophyl;
+      dset distance=ML NegBrLen=SetAbsVal;
+      NJ;
+      savetree format=nexus brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+    </block>
+    <options>
+      log,alignment,tree,inner,outer
+    </options>
+  </analysis>
+
+  <analysis id="paupfragment" type="paup">
+      <identify>
+ 	A1,B,C,D,F1,G,H,J,K
+      </identify>
+      <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      export format=nexus file=paup.nex replace=yes;
+      set criterion=distance outroot=monophyl;
+      set rootmethod=midpoint;
+      dset distance=HKY NegBrLen=SetAbsVal;
+      constraints CONSTRE(BACKBONE)=((2,3,4),((5,6,7),(11,12,13)),(8,9,10),(14,15),(16,17,18),(19,20,21),(22,23,24),(25,26));
+      NJ constraints=CONSTRE enforce=yes;
+      savetree format=nexus brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+      </block>
+      <cutoff>70</cutoff>
+   </analysis>
+
+  <analysis id="scan-pure" type="scan">
+    <window>
+      400
+    </window>
+    <step>
+      20
+    </step>
+    <cutoff>
+      0.9
+    </cutoff>
+    <analysis id="paupfragment" type="paup" />
+    <options>data-all,recombination:best</options>
+  </analysis>
+
+  <analysis id="scan-crf" type="scan">
+    <window>
+      400
+    </window>
+    <step>
+      40
+    </step>
+    <cutoff>
+      0.9
+    </cutoff>
+    <analysis type="paup">
+      <identify>
+        A1,B,C,D,F1,G,H,J,K
+      </identify>
+      <block>
+      begin paup;
+      log file=paup.log replace=yes;
+      export format=nexus file=paup.nex replace=yes;
+      set rootmethod=midpoint;
+      set criterion=distance outroot=monophyl;
+      dset distance=HKY NegBrLen=SetAbsVal;
+      constraints CONSTRE(BACKBONE)=((2,3,4),((5,6,7),(11,12,13)),(8,9,10),(14,15),(16,17,18),(19,20,21),(22,23,24),(25,26),(27,28));
+      NJ constraints=CONSTRE enforce=yes;       
+      savetree format=nexus brlens=yes file=paup.tre replace=yes;
+      bootstrap nreps=100 search=nj;
+      end;
+      quit;
+      </block>
+      <cutoff>70</cutoff>
+    </analysis>
+      <options>data-all,recombination:best</options>
+  </analysis>
+
+
+  <analysis id="scan-pure-self" type="scan">
+    <window>
+      1000
+    </window>
+    <step>
+      500
+    </step>
+    <analysis type="paup">
+      <identify>
+       A1,A2,B,C,D,F1,F2,G,H,J,K
+      </identify>
+      <block>
+        begin paup;
+        log file=paup.log replace=yes;
+        exclude gapped;
+        export format=nexus file=paup.nex replace=yes;
+        set rootmethod=midpoint;
+        set criterion=distance outroot=monophyl;
+        dset distance=HKY NegBrLen=SetAbsVal;
+        NJ;
+        savetree format=phylip brlens=yes file=paup.tre replace=yes;
+        bootstrap nreps=100 search=nj;
+        end;
+        quit;
+      </block>
+    </analysis>
+  </analysis>
+    
+</genotype-analyses>
+

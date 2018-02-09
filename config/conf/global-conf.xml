@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rega-genotype-settings>
+  <!-- xmlPath
+     Directory containing the xml files and reference sequence alignments, 
+     located in this projects xml/ directory.
+     
+     These define the input to the various analyses for each organism.
+    /var/RegaSubtyping/xml/
+   -->
+  <property name="xmlPath">
+    /opt/rega/xml
+  </property>
+
+  <!-- paupCmd
+     Location of your paup executable + name of the paup executable.
+    /usr/local/biotools/paup4b10-x86-linux-icc/paup4b10-x86-linux-icc
+   -->
+  <property name="paupCmd">
+    /opt/rega/tools/paup/paup4b10-x86-linux-icc
+  </property>
+
+  <!-- clustalWCmd
+     Location of your clustalw executable + name of the clustalw executable
+     /usr/local/biotools/clustalw2/clustalw2 is 4 times slower
+       /usr/local/biotools/clustalw-2.1-linux-x86_64-libcppstatic/clustalw2 
+   -->
+  <property name="clustalWCmd">
+    /opt/rega/tools/clustalw/bin/clustalw2
+  </property>
+
+  <!-- blastPath
+     Location of your blastall and formatdb executables (from ncbi-tools).
+    /usr/local/biotools/blast-2.2.11/bin/
+   -->
+  <property name="blastPath">
+    /opt/rega/tools/blast/bin
+  </property>
+
+  <!-- treePuzzleCmd
+     Location of your tree-puzzle executable + name of the tree-puzzle 5.2 executable
+     http://www.tree-puzzle.de
+     /usr/local/biotools/bin/puzzle
+   -->
+  <property name="treePuzzleCmd">
+    /usr/local/bin/puzzle
+  </property>
+
+  <!-- treeGraphCmd
+     Location of your treegraph executable + name of the treegraph executable
+    /usr/local/biotools/bin/tgf
+   -->
+  <property name="treeGraphCmd">
+    /opt/rega/tools/tgf/tgf
+  </property>
+  
+  <!-- 
+  	imageMagickPath
+  	Location of your imagemagick binaries
+   -->
+  <property name="imageMagickPath">
+    /usr/bin/
+  </property>
+  
+  <!--
+        imageMagickConvertCmd
+        Location of your image-magick convert binary
+   -->
+  <property name="imageMagickConvertCmd">
+   /usr/bin/convert
+  </property>
+
+
+  <property name="inkscapeCmd">
+   /usr/bin/inkscape
+  </property>
+
+  <!-- jobDir-%organism%
+     Location where the genotypetool can write job-related files for a 
+     specific organism.
+     
+     %organism% should correspond to an organism (like the folder name in xml/)
+     
+     The tool will never delete any files here. It is your responsibility to 
+     implement a policy that will discard old jobs.
+     
+     Each job dir must be different, since jobs cannot be mixed for several 
+     organisms.
+    /var/RegaSubtyping/jobs/NoV
+    /var/RegaSubtyping/jobs/HIV
+    /var/RegaSubtyping/jobs/HTLV
+   -->
+  <property name="jobDir-NoV">
+    /opt/rega/jobs/NoV
+  </property>
+  <property name="jobDir-HIV">
+    /opt/rega/jobs/HIV
+  </property>
+  <property name="jobDir-HTLV">
+    /opt/rega/jobs/HTLV
+  </property>
+  
+  <!-- maxAllowedSequences
+     The maximum number of sequences that may be submitted in a single batch.
+   -->
+  <property name="maxAllowedSequences">
+    1000
+  </property>
+  
+  <!-- maxJobDirLifeTime
+  	The maximum life time for a job dir, in milliseconds. -->
+  <property name="maxJobDirLifeTime">
+    604800000
+  </property>
+
+</rega-genotype-settings>

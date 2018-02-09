@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  caller:
+    image: python:3.6-alpine
+    volumes:
+      - ./entrypoint.sh:/bin/entrypoint.sh
+      - ./batch-caller.py:/usr/src/batch-caller.py
+      - ./data.fasta:/data.fasta
+    entrypoint: /bin/entrypoint.sh
+  rega:
+    image: hivdb/rega-subtyping
+    volumes:
+      - ./jobs:/opt/rega/jobs
+  # rega2: *rega
+  # rega3: *rega
+  # rega4: *rega
+  # rega5: *rega
+  # rega6: *rega

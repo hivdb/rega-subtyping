@@ -1,0 +1,65 @@
+!!AA_MULTIPLE_ALIGNMENT 1.0
+PileUp of: @seqlist
+
+ Symbol comparison table: GenRunData:blosum62.cmp  CompCheck: 6430
+
+                   GapWeight: 12
+             GapLengthWeight: 4 
+
+ seqlist.msf  MSF: 167  Type: P  September 5, 1997 15:15  Check: 8487 ..
+
+ Name: 1coha            Len:   167  Check: 7676  Weight:  1.00
+ Name: hba_human        Len:   167  Check: 7676  Weight:  1.00
+ Name: 2mhba            Len:   167  Check: 8765  Weight:  1.00
+ Name: HBA_HORSE        Len:   167  Check: 8735  Weight:  1.00
+ Name: hbb_horse        Len:   167  Check: 6585  Weight:  1.00
+ Name: hbb_human        Len:   167  Check: 7528  Weight:  1.00
+ Name: GLB5_PETMA       Len:   167  Check: 7298  Weight:  1.00
+ Name: myg_phyca        Len:   167  Check: 9928  Weight:  1.00
+ Name: lgb2_luplu       Len:   167  Check: 4296  Weight:  1.00
+
+//
+
+            1                                                   50
+     1coha  ~~~~~~~~~V LSPADKTNVK AAWGKVGAHA GEYGAEALER MFLSFPTTKT 
+ hba_human  ~~~~~~~~~V LSPADKTNVK AAWGKVGAHA GEYGAEALER MFLSFPTTKT 
+     2mhba  ~~~~~~~~~V LSAADKTNVK AAWSKVGGHA GEYGAEALER MFLGFPTTKT 
+ HBA_HORSE  ~~~~~~~~~V LSAADKTNVK AAWSKVGGHA GEYGAEALER MFLGFPTTKT 
+ hbb_horse  ~~~~~~~~VQ LSGEEKAAVL ALWDKV..NE EEVGGEALGR LLVVYPWTQR 
+ hbb_human  ~~~~~~~~VH LTPEEKSAVT ALWGKV..NV DEVGGEALGR LLVVYPWTQR 
+GLB5_PETMA  PIVDTGSVAP LSAAEKTKIR SAWAPVYSTY ETSGVDILVK FFTSTPAAQE 
+ myg_phyca  ~~~~~~~~~V LSEGEWQLVL HVWAKVEADV AGHGQDILIR LFKSHPETLE 
+lgb2_luplu  ~~~~~~~~GA LTESQAALVK SSWEEFNANI PKHTHRFFIL VLEIAPAAKD 
+
+            51                                                 100
+     1coha  YFPHF.DLSH .....GSAQV KGHGKKVADA LTNAVAHVDD ...M..PNAL 
+ hba_human  YFPHF.DLSH .....GSAQV KGHGKKVADA LTNAVAHVDD ...M..PNAL 
+     2mhba  YFPHF.DLSH .....GSAQV KAHGKKVGDA LTLAVGHLDD ...L..PGAL 
+ HBA_HORSE  YFPHF.DLSH .....GSAQV KAHGKKVGDA LTLAVGHLDD ...L..PGAL 
+ hbb_horse  FFDSFGDLSN PGAVMGNPKV KAHGKKVLHS FGEGVHHLDN ...L..KGTF 
+ hbb_human  FFESFGDLST PDAVMGNPKV KAHGKKVLGA FSDGLAHLDN ...L..KGTF 
+GLB5_PETMA  FFPKFKGLTT ADQLKKSADV RWHAERIINA VNDAVASMDD TEKM..SMKL 
+ myg_phyca  KFDRFKHLKT EAEMKASEDL KKHGVTVLTA LG...AILKK KGHH..EAEL 
+lgb2_luplu  LFSFLKGTSE VPQ..NNPEL QAHAGKVFKL VYEAAIQLQV TGVVVTDATL 
+
+            101                                                150
+     1coha  SALSDLHAHK LRVDPVNFKL LSHCLLVTLA AHLPAEFTPA VHASLDKFLA 
+ hba_human  SALSDLHAHK LRVDPVNFKL LSHCLLVTLA AHLPAEFTPA VHASLDKFLA 
+     2mhba  SDLSNLHAHK LRVDPVNFKL LSHCLLSTLA VHLPNDFTPA VHASLDKFLS 
+ HBA_HORSE  SNLSDLHAHK LRVDPVNFKL LSHCLLSTLA VHLPNDFTPA VHASLDKFLS 
+ hbb_horse  AALSELHCDK LHVDPENFRL LGNVLVVVLA RHFGKDFTPE LQASYQKVVA 
+ hbb_human  ATLSELHCDK LHVDPENFRL LGNVLVCVLA HHFGKEFTPP VQAAYQKVVA 
+GLB5_PETMA  RDLSGKHAKS FQVDPQYFKV LAAVIADTVA .........A GDAGFEKLMS 
+ myg_phyca  KPLAQSHATK HKIPIKYLEF ISEAIIHVLH SRHPGDFGAD AQGAMNKALE 
+lgb2_luplu  KNLGSVHVSK .GVADAHFPV VKEAILKTIK EVVGAKWSEE LNSAWTIAYD 
+
+            151            167
+     1coha  SVSTVLTSKY R~~~~~~
+ hba_human  SVSTVLTSKY R~~~~~~
+     2mhba  SVSTVLTSKY R~~~~~~
+ HBA_HORSE  SVSTVLTSKY R~~~~~~
+ hbb_horse  GVANALAHKY H~~~~~~
+ hbb_human  GVANALAHKY H~~~~~~
+GLB5_PETMA  MICILLRSAY ~~~~~~~
+ myg_phyca  LFRKDIAAKY KELGYQG
+lgb2_luplu  ELAIVIKKEM NDAA~~~

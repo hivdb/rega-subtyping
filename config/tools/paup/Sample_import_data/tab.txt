@@ -1,0 +1,6 @@
+speciesA	G	C	A	G	T	C	T	G	A	A	C	G	C	A	C	G	A	A	G	C	C	G	A	C	T	G	G	T	G	A	C	G	A	A	C	G	C	A	C	C
+speciesB	G	T	A	A	T	T	A	C	C	G	C	T	C	T	T	C	C	C	C	T	G	C	A	A	A	G	T	G	G	C	A	G	A	A	G	T	G	A	C	A
+speciesC	T	T	A	G	T	G	T	C	A	G	C	A	T	G	C	A	A	C	A	C	A	A	C	G	C	G	G	A	T	C	G	T	A	A	T	A	C	A	A	C
+speciesD	T	T	G	T	G	T	C	G	A	G	T	G	G	C	T	T	T	A	T	A	C	A	G	G	T	G	T	G	T	G	T	A	C	T	C	C	T	G	A	A
+speciesE	A	A	A	G	G	G	C	G	T	T	A	T	T	A	C	G	G	T	A	G	G	G	G	C	T	G	A	A	T	C	G	A	G	T	T	G	T	A	G	C
+speciesF	G	G	G	G	T	A	C	A	G	C	G	C	C	A	T	A	G	C	G	C	A	A	A	A	A	G	G	A	A	G	T	G	G	C	A	G	T	A	A	A

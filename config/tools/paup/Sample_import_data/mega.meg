@@ -1,0 +1,12 @@
+#mega
+   TITLE: Morphological and Molecular Test Data
+      Fake data in Mega format
+
+#one   	 0100001001 "morph" GCAGTCTGAACGCACGA
+#two   	 0000010111 "morph" GTAATTACCGCTCTTCC
+#three   1111110010 "morph" TTAGTGTCAGCATGCAA
+#four    0000010111 "morph" TTGTGTCGAGTGGCTTT
+#five    0000000100 "morph" GGGTACAGCGCCATAGC
+#six     0011101111 "morph" GGGTACAGCGCCATAGC
+#seven   1101000010 "morph" GCAGTCTGAACGCACGA
+#eight   0011110111 "morph" TTGTGTCGAGTGGCTTT
