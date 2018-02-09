@@ -5,12 +5,10 @@ import asyncio
 import requests
 
 TARGETS = [
-    'http://rega:8080/RegaSubtyping/hiv/typingtool',
-    'http://rega:8080/RegaSubtyping/hiv/typingtool',
-    'http://rega:8080/RegaSubtyping/hiv/typingtool',
-    'http://rega:8080/RegaSubtyping/hiv/typingtool',
-]
+    'http://rega:8080/RegaSubtyping/hiv/typingtool'
+] * 20
 MAX_PARALLEL_TASKS = len(TARGETS)
+SEQS_IN_BATCH = 1
 
 
 def findfirst(pattern, string, flags=0):
@@ -62,7 +60,7 @@ async def main():
         with open(fasta_file, 'r') as fp:
             for line in fp:
                 if line.startswith('>'):
-                    if seqcount == 1:
+                    if seqcount == SEQS_IN_BATCH:
                         futures.append(
                             post_fasta(''.join(partial), TARGETS[len(futures)])
                         )

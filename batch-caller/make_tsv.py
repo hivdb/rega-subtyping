@@ -5,7 +5,7 @@ import re
 
 
 def iterfiles():
-    for dirname, _, filenames in os.walk('results'):
+    for dirname, _, filenames in os.walk('jobs/HIV'):
         if not filenames:
             continue
         for filename in filenames:
@@ -63,6 +63,8 @@ def main():
     knownseqs = set()
     # with open('data.20170202.fasta') as fp:
     #     allseqs = set([l[1:].strip() for l in fp if l.startswith('>')])
+    print('\t'.join(['name', 'subtype',
+                     'subtypedetail', 'support', 'regaid']))
     for filename in iterfiles():
         for row in iterseqs(filename):
             if row[0] in knownseqs:

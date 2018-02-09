@@ -1,5 +1,5 @@
 build:
-	docker build --squash -t hivdb/rega-subtyping .
+	docker build -t hivdb/rega-subtyping .
 
 save:
 	docker save -o rega-subtyping.image hivdb/rega-subtyping
