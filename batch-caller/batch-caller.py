@@ -6,7 +6,7 @@ import requests
 
 TARGETS = [
     'http://rega:8080/RegaSubtyping/hiv/typingtool'
-] * 20
+] * 30
 MAX_PARALLEL_TASKS = len(TARGETS)
 SEQS_IN_BATCH = 1
 
