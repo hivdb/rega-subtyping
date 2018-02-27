@@ -1,11 +1,13 @@
 #! /usr/bin/env
+from __future__ import print_function
 
 import os
 import re
+import sys
 
 
-def iterfiles():
-    for dirname, _, filenames in os.walk('jobs/HIV'):
+def iterfiles(dirname):
+    for dirname, _, filenames in os.walk(dirname):
         if not filenames:
             continue
         for filename in filenames:
@@ -21,7 +23,7 @@ def trans_subtype(subtype):
     return subtype
 
 
-def iterseqs(filename):
+def iterseqs_from_file(filename, keymap):
     regaid = os.path.split(os.path.split(filename)[0])[-1]
     with open(filename) as fp:
         currentseq = subtype = subtypedetail = support = ''
@@ -29,7 +31,12 @@ def iterseqs(filename):
         for line in fp:
             if '<sequence' in line:
                 match = next(re.finditer(r'<sequence name="([^"]+)"', line))
-                currentseq = match.group(1).split('_', 1)[0]
+                currentseq = \
+                    match.group(1).split('_', 1)[0]
+                if currentseq not in keymap:
+                    print('Not found: {}'.format(currentseq), file=sys.stderr)
+                    continue
+                currentseq = keymap[currentseq]
             if '<conclusion' in line:
                 in_conclusion = True
             elif in_conclusion and '<id>' in line:
@@ -59,20 +66,27 @@ def filterfasta(infile, outfile, excludes):
         outfile.write(line)
 
 
+def iterseqs(dirname='jobs/HIV'):
+    keymap = {}
+    with open('keymap.txt') as fp:
+        for line in fp:
+            key, header = line.strip().split('\t', 1)
+            keymap[key] = header
+    for filename in iterfiles(dirname):
+        for row in iterseqs_from_file(filename, keymap):
+            yield row
+
+
 def main():
     knownseqs = set()
-    # with open('data.20170202.fasta') as fp:
-    #     allseqs = set([l[1:].strip() for l in fp if l.startswith('>')])
     print('\t'.join(['name', 'subtype',
                      'subtypedetail', 'support', 'regaid']))
-    for filename in iterfiles():
-        for row in iterseqs(filename):
-            if row[0] in knownseqs:
-                continue
-            if row[1]:
-                knownseqs.add(row[0])
-                print('\t'.join(row))
-    # print(allseqs - knownseqs)
+    for row in iterseqs():
+        if row[0] in knownseqs:
+            continue
+        if row[1]:
+            knownseqs.add(row[0])
+            print('\t'.join(row))
 
 
 if __name__ == '__main__':

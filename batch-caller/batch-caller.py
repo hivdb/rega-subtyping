@@ -4,18 +4,20 @@ import time
 import asyncio
 import requests
 
+from make_tsv import iterseqs
+
 TARGETS = [
     'http://rega:8080/RegaSubtyping/hiv/typingtool'
 ] * 30
 MAX_PARALLEL_TASKS = len(TARGETS)
-SEQS_IN_BATCH = 1
 
 
 def findfirst(pattern, string, flags=0):
     return next(re.finditer(pattern, string, flags))
 
 
-async def post_fasta(fasta, target):
+async def post_sequence(header, seq, target):
+    fasta = '>{}\n{}\n'.format(header, seq)
     headers = {
         'Accept-Language': 'en'
     }
@@ -34,11 +36,14 @@ async def post_fasta(fasta, target):
                 'request': 'page',
                 'wtd': sid,
                 button_run: '',
-                seq_input: fasta
+                seq_input: fasta,
             }, headers=headers
         )
     )
-    jobid = findfirst(r'job/(\d+)/?;', resp.url).group(1)
+    try:
+        jobid = findfirst(r'job/(\d+)/?;', resp.url).group(1)
+    except StopIteration:
+        return
     start = time.time()
     while True:
         if 'Analysis in progress...' not in resp.text:
@@ -48,33 +53,76 @@ async def post_fasta(fasta, target):
             None, lambda: requests.get(resp.url, headers=headers))
     print(fasta.split(None, 1)[0],
           'finished in %.2f seconds.' % (time.time() - start))
+    sys.stdout.flush()
     return jobid
+
+
+def iter_sequences(fasta_files):
+    header = None
+    seq = []
+    for fasta_file in fasta_files:
+        with open(fasta_file, 'r') as fp:
+            for line in fp:
+                if line.startswith('#'):
+                    continue
+                elif line.startswith('>'):
+                    if seq:
+                        yield header, ''.join(seq)
+                    header = line[1:].strip()
+                    seq = []
+                else:
+                    seq.append(line.strip())
+    if seq:
+        yield header, ''.join(seq)
+
+
+def refresh_keymap(sequences):
+    with open('keymap.txt', 'w') as fp:
+        curkey = 1
+        for header, _ in sequences:
+            fp.write('SEQ{}\t{}\n'.format(curkey, header))
+            curkey += 1
+
+
+def get_reversed_keymap():
+    reversed_keymap = {}
+    with open('keymap.txt', 'r') as fp:
+        for line in fp:
+            key, header = line.strip().split('\t')
+            reversed_keymap[header] = key
+    return reversed_keymap
+
+
+async def batch_run(sequences):
+    reversed_keymap = get_reversed_keymap()
+    known_seqs = set(row[0] for row in iterseqs('/usr/src/jobs/HIV'))
+    futures = []
+    hasnew = False
+    for header, seq in sequences:
+        if header in known_seqs:
+            print('Skipped known sequence {}'.format(header))
+            sys.stdout.flush()
+            continue
+        hasnew = True
+        header = reversed_keymap[header]
+        futures.append(
+            post_sequence(header, seq, TARGETS[len(futures)])
+        )
+        if len(futures) == MAX_PARALLEL_TASKS:
+            await asyncio.wait(futures)
+            futures = []
+    if futures:
+        await asyncio.wait(futures)
+    return hasnew
 
 
 async def main():
     fasta_files = sys.argv[1:]
-    futures = []
-    partial = []
-    seqcount = -1
-    for fasta_file in fasta_files:
-        with open(fasta_file, 'r') as fp:
-            for line in fp:
-                if line.startswith('>'):
-                    if seqcount == SEQS_IN_BATCH:
-                        futures.append(
-                            post_fasta(''.join(partial), TARGETS[len(futures)])
-                        )
-                        if len(futures) == MAX_PARALLEL_TASKS:
-                            await asyncio.wait(futures)
-                            futures = []
-                        partial = []
-                        seqcount = 0
-                    seqcount += 1
-                partial.append(line)
-    if partial:
-        futures.append(post_fasta(''.join(partial), TARGETS[len(futures)]))
-    if futures:
-        await asyncio.wait(futures)
+    sequences = list(iter_sequences(fasta_files))
+    refresh_keymap(sequences)
+    for i in range(1000):
+        if not await batch_run(sequences):
+            break
 
 
 if __name__ == '__main__':

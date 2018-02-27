@@ -6,7 +6,10 @@ services:
     volumes:
       - ./entrypoint.sh:/bin/entrypoint.sh
       - ./batch-caller.py:/usr/src/batch-caller.py
+      - ./make_tsv.py:/usr/src/make_tsv.py
+      - ./jobs:/usr/src/jobs
       - ./data.fasta:/data.fasta
+      - ./keymap.txt:/keymap.txt
     entrypoint: /bin/entrypoint.sh
   rega:
     image: hivdb/rega-subtyping

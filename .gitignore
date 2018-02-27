@@ -2,3 +2,6 @@ batch-caller/jobs/HIV
 batch-caller/jobs/HTLV
 batch-caller/jobs/NoV
 batch-caller/results/*
+*.fasta
+*.swp
+batch-caller/*.txt

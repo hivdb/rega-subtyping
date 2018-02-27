@@ -1,5 +1,6 @@
 FROM tomcat:7-jre8-alpine
 ENV LANG=en_US.UTF-8
+ENV CATALINA_OPTS "-Xms5120M -Xmx10240M"
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
     ALPINE_GLIBC_PACKAGE_VERSION="2.23-r3" && \
     ALPINE_GLIBC_BASE_PACKAGE_FILENAME="glibc-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
